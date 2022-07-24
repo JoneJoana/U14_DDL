@@ -3,15 +3,14 @@ CREATE database U14_ex1;
 use U14_ex1;
 
 CREATE TABLE Estaciones(
-  id int AUTO_INCREMENT,
+  id int AUTO_INCREMENT PRIMARY KEY,
   latitud int,
   longitud int,
   altitud int
-  PRIMARY KEY(id)
   );
 
-CREATE TABLE Muestra(
-  id int not null,
+CREATE TABLE Muestras(
+  idMuestra int not null,
   idEstaciones int,
   fecha date,
   temp_min double,
@@ -20,8 +19,8 @@ CREATE TABLE Muestra(
   hum_min double,
   hum_max double,
   vel_viento_min int,
-  vel_viento_max int
-  PRIMARY KEY(id),
+  vel_viento_max int,
+  PRIMARY KEY(idMuestra,idEstaciones),
   CONSTRAINT FK_EstacionMuestra FOREIGN KEY (idEstaciones) REFERENCES Estaciones(id)
   );
 
