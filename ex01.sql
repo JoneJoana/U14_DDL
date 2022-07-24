@@ -2,14 +2,14 @@ CREATE database U14_ex1;
 
 use U14_ex1;
 
-CREATE TABLE Estaciones(
+CREATE TABLE IF NOT EXISTS Estaciones(
   id int AUTO_INCREMENT PRIMARY KEY,
   latitud int,
   longitud int,
   altitud int
   );
 
-CREATE TABLE Muestras(
+CREATE TABLE  IF NOT EXISTS Muestras(
   idMuestra int not null,
   idEstaciones int,
   fecha date,
