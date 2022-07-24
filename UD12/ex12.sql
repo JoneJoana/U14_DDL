@@ -21,7 +21,7 @@ CREATE TABLE Proyectos(
     fechaInicio date,
     fechaFin date,
     idEmpresa varchar(9),
-    CONSTRAINT FK_TipoPiezas FOREIGN KEY (idEmpresa) REFERENCES Empresas(cif)
+    CONSTRAINT FK_ProyectosEmpresa FOREIGN KEY (idEmpresa) REFERENCES Empresas(cif)
 );
 
 CREATE TABLE Trabajadores(
@@ -41,6 +41,3 @@ CREATE TABLE Realiza(
     CONSTRAINT FK_RealizaProyecto FOREIGN KEY (idProyecto) REFERENCES Proyectos(idProyecto),
     CONSTRAINT FK_RealizaProfesion FOREIGN KEY (idProfesion) REFERENCES Profesiones(idProfesion)
 );
-
-
-
