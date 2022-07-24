@@ -62,7 +62,14 @@ CREATE TABLE Alquileres(
     CONSTRAINT FK_AlquileresArrendatario FOREIGN KEY (codigoArrendatario) REFERENCES Personas(codigoPersonal)
 );
 
-
+CREATE TABLE Pagos(
+    codigoPago int,
+    codigoAlquiler int,
+    mes date,
+    año date,
+    valor double,
+    CONSTRAINT FK_PagosInmueble FOREIGN KEY (codigoAlquiler) REFERENCES Alquileres(codigoAlquiler)
+);
 
 
 
