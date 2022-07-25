@@ -35,7 +35,7 @@ CREATE TABLE Pisos(
 CREATE TABLE Locales(
 	codigoInmueble int PRIMARY KEY,
     uso varchar(25),
-    servicio varchar(25),
+    servicio boolean,
 	CONSTRAINT FK_LocalInmueble FOREIGN KEY (codigoInmueble) REFERENCES Inmuebles(codigoInmueble)
 );
 CREATE TABLE Compras(
