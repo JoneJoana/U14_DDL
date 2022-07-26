@@ -65,8 +65,8 @@ CREATE TABLE Alquileres(
 CREATE TABLE Pagos(
     codigoPago int,
     codigoAlquiler int,
-    mes date,
-    año date,
+    mes varchar(10),
+    año int,
     valor double,
     CONSTRAINT FK_PagosInmueble FOREIGN KEY (codigoAlquiler) REFERENCES Alquileres(codigoAlquiler)
 );
